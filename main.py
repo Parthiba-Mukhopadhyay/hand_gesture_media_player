@@ -52,7 +52,7 @@ while True:
         if not(start):
           starttime=time.time()
           start=True
-        elif(endtime-starttime)>0.3: #to give the user a 0.3sec buffer between two hand operations
+        elif(endtime-starttime)>0.2: #to give the user a 0.3sec buffer between two hand operations
 
           if cnt==1:
             pyautogui.press('right') #to move forward
