@@ -5,6 +5,24 @@
 import cv2
 import mediapipe as mp
 
+def countfinger(list):
+  count=0 #counts number of fingers raised
+  threshold=(list.landmark[0].y*100-list.landmark[9].y*100)/2 # finds the threshold limit, half the dist between lowest grit of middle finger and end of palm
+  if (list.landmark[5].y*100-list.landmark[8].y*100)>threshold: # 1st finger
+    count+=1
+  if (list.landmark[9].y*100-list.landmark[12].y*100)>threshold: # 2nd finger
+    count+=1
+  if (list.landmark[13].y*100-list.landmark[16].y*100)>threshold: # 3rd finger
+    count+=1
+  if (list.landmark[17].y*100-list.landmark[20].y*100)>threshold: # 4th finger
+    count+=1
+  if (list.landmark[5].x*100-list.landmark[4].x*100)>threshold: # thumb {for thub we check x axis because it moves in x direction unlike the rest that moves in y direction}
+    count+=1
+  return count
+
+
+
+
 vid=cv2.VideoCapture(0) # captures the video
 
 drawing=mp.solutions.drawing_utils #provides options for drawing keypoints and connections on frames
@@ -19,6 +37,10 @@ while True:
   res=hand_obj.process(cv2.cvtColor(frame,cv2.COLOR_BGR2RGB))
 
   if res.multi_hand_landmarks: #condition to check if 1 or more hand is present in the frame
+
+    kplist=res.multi_hand_landmarks[0] # we create a list of the hand landmark keypoints and pass the list to function to perform operations
+    cnt=countfinger(kplist)
+
     drawing.draw_landmarks(frame, res.multi_hand_landmarks[0],hands.HAND_CONNECTIONS) #we select 0 for considering only first element of tuple i.e. considering only 1 hand. Hand connections show the drawn lines between the landmark keypoints
 
 
