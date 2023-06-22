@@ -23,14 +23,14 @@ To run the hand gesture controlled media player, you will need the following:
   - Operating system: Windows, macOS, or Linux.
   - Python (version 3.6 or higher) and the necessary dependencies.
   - OpenCV library for computer vision tasks.
-  - Media player software or library for handling media playback (e.g., VLC, Pygame, etc.).
+  - Media player software or online media player for handling media playback (e.g., VLC, Pygame, etc.).
 
 ## Installation
 
 1. Clone the project repository from GitHub:
 
    ```shell
-   git clone https://github.com/your-username/hand-gesture-media-player.git
+   git clone https://github.com/Parthiba-Mukhopadhyay/hand_gesture_media_player
    ```
 
 2. Install the required dependencies using pip:
