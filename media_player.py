@@ -19,9 +19,6 @@ def countfinger(list):
     count+=1
   return count
 
-
-
-
 vid=cv2.VideoCapture(0) # captures the video
 
 drawing=mp.solutions.drawing_utils #provides options for drawing keypoints and connections on frames
