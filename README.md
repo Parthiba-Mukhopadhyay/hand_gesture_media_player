@@ -39,55 +39,20 @@ To run the hand gesture controlled media player, you will need the following:
    pip install -r requirements.txt
    ```
 
-3. Configure the media player software or library to work with the project. Refer to the respective documentation for instructions.
-
-4. Connect a camera to your computer or ensure that the built-in camera is functional.
+3. Connect a camera to your computer or ensure that the built-in camera is functional.
 
 ## Usage
 
 1. Launch the hand gesture controlled media player by running the main script:
 
    ```shell
-   python main.py
+   python media_player.py
    ```
 
-2. Position your hand in front of the camera and perform the predefined hand gestures to control the media playback.
+2. Position your hand in front of the camera and perform the hand gestures to control the media playback.
+   [1 for move forward, 2 for move backward, 3 for volume increase, 4 for volume decrease and 5 to play or pause]
 
 3. The media player interface will display the current status and respond to your hand gestures accordingly.
 
 4. Customize the hand gestures by modifying the gesture recognition configuration file.
 
-## Customization
-
-To customize the hand gestures and their associated actions, follow these steps:
-
-1. Open the gesture recognition configuration file (`config.json`) in a text editor.
-
-2. Modify the existing gesture definitions or add new ones as needed. Each gesture definition consists of:
-   - A unique gesture ID
-   - A name or label for the gesture
-   - The hand gesture pattern or sequence to be recognized
-
-3. Save the changes and restart the media player for the modifications to take effect.
-
-## Contribution
-
-Contributions to the hand gesture controlled media player project are welcome. If you find any issues or have suggestions for improvement, please open an issue on the project repository.
-
-If you would like to contribute code changes, fork the repository, make your modifications, and submit a pull request with a detailed description of the changes.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
-## Acknowledgments
-
-- [OpenCV](https://opencv.org/) - Open Source Computer Vision Library.
-- [Media player software/library] - Insert name of the media player software/library used.
-
-## Contact
-
-For any inquiries or questions, please contact [your email address].
-```
-
-You can copy and paste the above code into your Markdown file to create the README.
