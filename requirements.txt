@@ -2,4 +2,4 @@ cv2
 mediapipe
 pyautogui
 pycaw
-numppy
+numpy
