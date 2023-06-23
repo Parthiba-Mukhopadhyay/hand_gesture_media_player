@@ -9,6 +9,18 @@ This project is a hand gesture controlled media player that allows users to cont
 - **Media Playback Control**: Users can control various media playback functions such as play, pause, stop, and forward using hand gestures.
 - **Volume Control**: Hand gestures can be used to adjust the volume of the media player.
 
+## Hand Detection, logic used
+![handlandmark](https://github.com/Parthiba-Mukhopadhyay/hand_gesture_media_player/assets/89331202/80c7e10e-48ac-44c5-90ea-be40643f6cab)
+<br>
+The following reference points are considered for hand landmark detection.
+<br>
+The y axis distance between bottom most grit and topmost tip of any finger in extended position is greater than half the y axis distance between point 0 and 9 that is of palm and lower most grit of middle finger.
+<br>
+In fist position, none of the fingers will satisfy above condition, when any finger is raised, above condition is satisfied and count is increased.
+<br>
+Thumb has similar approach but in the x axis due to its horizontal transition and not vertical.
+
+
 ## Requirements
 
 To run the hand gesture controlled media player, you will need the following:
